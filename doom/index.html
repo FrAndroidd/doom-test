@@ -19,17 +19,23 @@
       }
       canvas {
         transform: rotate(90deg);
-        top: 120px;
-        left: -120px;
+        top: 100px;
+        left: -100px;
         position: absolute;
+        width: 560px;
+        height: 360px;
       }
       button {
         border: none;
         border-radius: 4px;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 4px;
+        opacity: 0.33;
+      }
+      .button2 {
         width: 32px;
         height: 32px;
-        margin-bottom: 4px;
-        opacity: 0.5;
       }
       #output {
         display: none;
@@ -37,7 +43,6 @@
       #ctrlButton {
         width: 69px;
         height: 69px;
-        opacity: 0.33;
       }
       #focushint {
         display: none;
@@ -65,12 +70,12 @@
       <br>
       <button id="rightButton">&#x2193;</button>
 
-      <br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br>
 
-      <button id="altButton">↕️</button>
+      <button id="altButton" class="button2">↕️</button>
       <br>
-      <button id="enterButton">▫️</button>
-      <button id="spaceButton">⚪</button>
+      <button id="enterButton" class="button2">▫️</button>
+      <button id="spaceButton" class="button2">⚪</button>
       <br>
       <button id="ctrlButton">💥</button>
       
