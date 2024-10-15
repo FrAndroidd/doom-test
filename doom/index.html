@@ -6,16 +6,20 @@
 
   <head>
     <meta charset="utf-8">
-    <title>DooM</title>
+    <title>DOOM</title>
 
     <style>
       * {
         user-select: none;
       }
+      *:focus, *:active {
+        border: none;
+      }
       body {
         background: #111;
         color: #FFF;
         font-family: "Roboto";
+        font-size: 16px;
       }
       canvas {
         transform: rotate(90deg);
@@ -53,11 +57,18 @@
       .button-container {
         position: absolute;
       }
+      .fps {
+        position: absolute;
+        transform: rotate(90deg);
+        top: 20px;
+        left: 320px;
+      }
     </style>
   </head>
 
   <body>
     <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
+    <a class="fps"><span id="fps_stats">0</span> FPS</a>
     <div class="button-container">
       
 
@@ -70,7 +81,7 @@
       <br>
       <button id="rightButton">&#x2193;</button>
 
-      <br><br><br><br><br><br><br><br><br>
+      <div style="height: 195px;"></div>
 
       <button id="altButton" class="button2">↕️</button>
       <br>
@@ -86,7 +97,7 @@
     <p id="focushint"></p>
     <div style="display: none">
       gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br>
-    DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
+    DooM FPS: (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
     Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
     </div>
 
