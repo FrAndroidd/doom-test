@@ -31,10 +31,16 @@
         margin-bottom: 4px;
         opacity: 0.5;
       }
+      #output {
+        display: none;
+      }
       #ctrlButton {
         width: 69px;
         height: 69px;
         opacity: 0.33;
+      }
+      #focushint {
+        display: none;
       }
       .container {
         display: flex;
@@ -46,6 +52,7 @@
   </head>
 
   <body>
+    <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
     <div class="button-container">
       
 
@@ -69,8 +76,15 @@
       
     </div>
 
-    <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
     
+    <div id="output"></div>
+    <p id="focushint"></p>
+    <div style="display: none">
+      gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br>
+    DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
+    Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
+    </div>
+
     <script src="main.js" defer></script>
   </body>
 
